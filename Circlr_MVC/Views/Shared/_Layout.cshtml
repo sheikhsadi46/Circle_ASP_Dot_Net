@@ -1,0 +1,76 @@
+﻿@{
+    var username = Context.Session.GetString("Username");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Circle</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="/">Circle</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            
+                            @if (!string.IsNullOrEmpty(username))
+                            {
+                                <div class="d-flex align-items-center">
+                                    <a class="nav-link" asp-controller="Auth" asp-action="Products">Products</a>
+                                    <a asp-controller="Auth" asp-action="Edit" class="nav-link me-2">Welcome, @username!</a>
+                                    <form asp-controller="Auth" asp-action="Logout" method="post" class="d-inline">
+                                        <button type="submit" class="btn btn-link nav-link">Logout</button>
+                                    </form>
+                                </div>
+                            }
+                            else
+                            {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Auth" asp-action="Products">Products</a>
+                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Auth" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Auth" asp-action="Register">Register</a>
+                            </li>
+                            }
+                        
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container mt-4 flex-grow-1">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>@ViewData["Title"]</h1>
+                @RenderBody()
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-transparent py-3">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 - Circle</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

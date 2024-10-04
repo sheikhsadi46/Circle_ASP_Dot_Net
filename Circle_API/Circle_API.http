@@ -1,0 +1,6 @@
+@Circle_API_HostAddress = http://localhost:5021
+
+GET {{Circle_API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

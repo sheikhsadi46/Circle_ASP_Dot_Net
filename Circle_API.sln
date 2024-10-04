@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Circle_API", "Circle_API\Circle_API.csproj", "{C7CDF3EC-0196-41CE-8F32-6B18D16BDB84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Circlr_MVC", "Circlr_MVC\Circlr_MVC.csproj", "{999207E2-EBCC-4A61-ACEA-4A8F0585AB9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7CDF3EC-0196-41CE-8F32-6B18D16BDB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7CDF3EC-0196-41CE-8F32-6B18D16BDB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7CDF3EC-0196-41CE-8F32-6B18D16BDB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7CDF3EC-0196-41CE-8F32-6B18D16BDB84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999207E2-EBCC-4A61-ACEA-4A8F0585AB9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999207E2-EBCC-4A61-ACEA-4A8F0585AB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999207E2-EBCC-4A61-ACEA-4A8F0585AB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999207E2-EBCC-4A61-ACEA-4A8F0585AB9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54709181-0A26-462C-8B19-AF80E49006E4}
+	EndGlobalSection
+EndGlobal

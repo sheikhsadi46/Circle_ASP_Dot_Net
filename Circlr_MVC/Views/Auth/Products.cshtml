@@ -1,0 +1,47 @@
+﻿@model List<Circle_MVC.Models.Product>
+
+<h2>Available Products</h2>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">@ViewBag.Message</div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Brand</th>
+            <th>Color</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.BrandName</td>
+                <td>@product.ColorName</td>
+                <td>@product.Price</td>
+                <td>@product.Stock.ToString("0")</td>
+                <td>
+                    @if (product.Stock > 0)
+                    {
+                        <form asp-action="Purchase" method="post">
+                            <input type="hidden" name="productId" value="@product.Id" />
+                            <input type="number" name="quantity" value="1" min="1" max="@product.Stock" />
+                            <button type="submit" class="btn btn-primary">Buy</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="text-danger">Out of stock</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
